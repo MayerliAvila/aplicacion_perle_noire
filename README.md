@@ -1,44 +1,62 @@
-📌 Proyecto de Optimización de Procesos Administrativos - Perle Noire
-📝 Descripción
-En la era digital actual, la optimización de procesos administrativos se ha convertido en un factor determinante para el éxito de cualquier organización.
+La rama producción contiene la versión estable, optimizada y lista para uso real del sistema administrativo de Perle Noire.
+Aquí se almacena el código final que ha superado todas las etapas de desarrollo, pruebas e integración.
 
-Perle Noire, como empresa dedicada a la prestación de servicios de belleza, enfrenta desafíos significativos en la gestión manual de sus procesos de agendamiento de citas y facturación, lo cual genera:
+Esta rama representa el estado actual del sistema tal como se encuentra implementado para los usuarios finales.
 
-Ineficiencias operativas
-Posibles errores humanos
-Demoras en la atención al cliente
-🚩 Problemática
-La gestión manual de citas presenta múltiples inconvenientes:
+🏆 Objetivo de la Rama
 
-Duplicación de horarios
-Pérdida de información
-Dificultades en el seguimiento de disponibilidad
-Limitaciones en el acceso a la información desde diferentes ubicaciones
-En cuanto a la facturación manual, se identifican:
+Garantizar que el entorno productivo:
 
-Riesgos de inconsistencias en los registros
-Demoras en la generación de reportes financieros
-Complicaciones en el control de ingresos y seguimiento de pagos
-🎯 Solución Propuesta
-Se plantea el desarrollo de un sistema de información integral que automatice y optimice tanto el proceso de:
+Sea estable y libre de errores conocidos.
+
+Refleje la última versión aprobada del sistema.
+
+Permita un funcionamiento confiable para clientes, colaboradores y administradores.
+
+Mantenga la integridad de los procesos de:
 
 Agendamiento de citas
-Gestión de facturación
-Este sistema permitirá a Perle Noire:
-✅ Modernizar sus operaciones
-✅ Reducir los tiempos de respuesta
-✅ Minimizar errores administrativos
-✅ Brindar un mejor servicio a los clientes
 
-💻 Objetivo del Proyecto
-Desarrollar una aplicación web que integre de manera eficiente el agendamiento de citas con el sistema de facturación, logrando:
+Gestión de servicios y personal
 
-Mayor productividad organizacional
-Acceso a información en tiempo real
-Crecimiento sostenible para la empresa
-Transformación de procesos manuales en procedimientos automatizados
-Precisión, confiabilidad y eficiencia en la gestión administrativa
-📂 Documentación
-Toda la documentación oficial del proyecto se encuentra disponible en el siguiente enlace:
+Facturación
 
-👉 Documentación del Proyecto (Word)
+Control de disponibilidad
+
+Consultas y reportes administrativos
+
+🔐 Características de Producción
+
+Código completamente probado y validado.
+
+Seguridad reforzada (manejo de credenciales, cifrado, roles, etc.).
+
+Rendimiento optimizado para uso real.
+
+Configuración lista para despliegue en servidores.
+
+Integración con bases de datos reales y servicios externos.
+
+🔄 Flujo de Integración
+
+El flujo de trabajo hacia esta rama sigue un proceso riguroso:
+
+Desarrollo → se crea o mejora funcionalidad en develop.
+
+Pruebas → la funcionalidad pasa a prueba para validación.
+
+Revisión y aprobación → se verifica que cumple con estándares técnicos.
+
+Merge a producción → solo cuando está 100% estable.
+
+Despliegue final → versión activa para los usuarios.
+
+🛑 Restricciones y Buenas Prácticas
+
+No se debe desarrollar directamente en esta rama.
+
+Todos los cambios deben pasar por revisión y pruebas previas.
+
+No debe contener código temporal, experimental o sin validar.
+
+Se recomienda usar tags o releases para cada versión estable.
