@@ -1,0 +1,403 @@
+
+    /* VARIABLES GLOBALES */
+    :root {
+        --primary-color: #333;
+        --secondary-color: #5d5d5d;
+        --accent-color: #ed5dd8;
+        --light-bg: #f4f7f6;
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+        background-color: var(--light-bg);
+        color: var(--primary-color);
+    }
+
+    /* --- NAVEGACIÓN (NAVBAR) --- */
+    .navbar {
+        background-color: #fff;
+        padding: 15px 5%;
+        box-shadow: var(--shadow);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--accent-color);
+    }
+
+    .user-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        color: var(--secondary-color);
+    }
+
+    .user-avatar {
+        background-color: var(--accent-color);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9em;
+        font-weight: 700;
+    }
+
+    .btn-header {
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 6px;
+        font-size: 0.9em;
+        transition: background-color 0.3s;
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+        background-color: transparent;
+    }
+
+    .btn-header:hover {
+        background-color: var(--accent-color);
+        color: white;
+    }
+
+    /* --- CONTENIDO PRINCIPAL --- */
+    .main-content {
+        padding: 30px 5%;
+    }
+
+    .page-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+        text-align: center;
+    }
+
+    /* --- MENSAJES DE ALERTA --- */
+    .alert {
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 500;
+        box-shadow: var(--shadow);
+    }
+
+    .alert.success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .alert.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+    /* --- GRID DE SERVICIOS --- */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    .service-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-header {
+        background-color: var(--accent-color);
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-icon {
+        font-size: 2em;
+        color: white;
+    }
+
+    .service-body {
+        padding: 20px;
+        flex-grow: 1;
+    }
+
+    .service-title {
+        font-size: 1.4em;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    .service-description {
+        font-size: 0.95em;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+    }
+
+    .service-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .price {
+        font-size: 1.3em;
+        font-weight: 700;
+        color: var(--accent-color);
+    }
+
+    .duration {
+        font-size: 0.9em;
+        color: var(--secondary-color);
+        background-color: var(--light-bg);
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+
+    .service-footer {
+        padding: 15px 20px;
+        background-color: #fafafa;
+        border-top: 1px solid #eee;
+    }
+
+    .btn-agendar {
+        width: 100%;
+        padding: 10px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn-agendar:hover {
+        background-color: #4cae4c;
+    }
+
+    /* --- MODAL DE AGENDAMIENTO --- */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+        z-index: 2000;
+    }
+
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transform: translateY(-20px);
+        transition: transform 0.3s;
+    }
+
+    .modal-overlay.active .modal-container {
+        transform: translateY(0);
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    .modal-title {
+        font-size: 1.6em;
+        color: var(--accent-color);
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: var(--secondary-color);
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 0.9em;
+    }
+
+    .modal-body input[type="text"],
+    .modal-body input[type="date"],
+    .modal-body input[type="time"] {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+    
+    .form-row {
+        display: flex;
+        gap: 15px;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
+    /* SELECCIÓN DE ESTILISTA */
+    .estilista-selection {
+        margin-top: 20px;
+    }
+
+    .estilista-label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 0.9em;
+    }
+
+    .estilistas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .estilista-card {
+        text-align: center;
+        padding: 15px 10px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: border-color 0.3s, background-color 0.3s;
+    }
+
+    .estilista-card:hover {
+        border-color: #6A5ACD;
+    }
+
+    .estilista-card.selected {
+        border-color: var(--accent-color);
+        background-color: #f0f0ff;
+        box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
+    }
+
+    .estilista-avatar {
+        font-size: 2em;
+        margin-bottom: 5px;
+    }
+
+    .estilista-nombre {
+        font-size: 0.85em;
+        font-weight: 500;
+        display: block;
+    }
+
+    /* Estilo general para todos los campos de formulario y el nuevo SELECT */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group select { /* 🚨 Se incluye el SELECT en el estilo */
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordes suaves */
+    box-sizing: border-box;
+    font-size: 1em;
+    color: var(--primary-color);
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Asegura que la flecha del select se vea bien en navegadores */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Añade espacio para un ícono personalizado si fuera necesario, aunque es opcional */
+    padding-right: 30px; 
+}
+
+/* Estado Focus (al hacer clic o usar tabulador en el campo) */
+.form-group input:focus,
+.form-group select:focus { /* 🚨 Se aplica el foco al SELECT */
+    border-color: var(--accent-color); /* Borde rosado al enfocarse */
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.3); /* Sombra suave rosada */
+    outline: none; /* Quitar el contorno por defecto del navegador */
+}
+
+/* Estilo para las opciones del SELECT */
+.form-group select option {
+    background: #fff;
+    color: var(--primary-color);
+}
+    /* BOTÓN DE CONFIRMACIÓN */
+    .btn-confirmar {
+        width: 100%;
+        padding: 12px;
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+    }
+
+    .btn-confirmar:hover {
+        background-color: #6A5ACD;
+    }

@@ -1,0 +1,213 @@
+/* VARIABLES GLOBALES */
+:root {
+    --primary-color: #333;
+    --secondary-color: #5d5d5d;
+    --accent-color: #ed5dd8; 
+    --accent-hover: #ff91c7; /* Rosado más claro para hover */
+    --light-bg: #f4f7f6;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+}
+
+/* --- NAVEGACIÓN (NAVBAR) --- */
+.navbar {
+    background-color: #fff;
+    padding: 15px 5%;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--accent-color); /* 🚨 Usa el nuevo rosado */
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.user-avatar {
+    background-color: var(--accent-color); /* 🚨 Usa el nuevo rosado */
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.btn-header {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    border: 1px solid var(--accent-color); /* 🚨 Usa el nuevo rosado */
+    color: var(--accent-color); /* 🚨 Usa el nuevo rosado */
+    background-color: transparent;
+}
+
+.btn-header:hover {
+    background-color: var(--accent-color); /* 🚨 Usa el nuevo rosado */
+    color: white;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content {
+    padding: 30px 5%;
+}
+
+.page-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* --- TARJETA DE FACTURACIÓN (CONTENEDOR DE LA TABLA) --- */
+.facturacion-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-title {
+    font-size: 1.6em;
+    color: var(--accent-color); /* 🚨 Usa el nuevo rosado */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.no-citas {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--secondary-color);
+    font-size: 1.1em;
+}
+
+/* --- TABLA --- */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.facturacion-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Asegura que la tabla no sea demasiado pequeña en móvil */
+}
+
+.facturacion-table thead th {
+    background-color: #f8f8f8;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+.facturacion-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: var(--secondary-color);
+    font-size: 0.95em;
+}
+
+.facturacion-table tbody tr:hover {
+    background-color: #fdfdff;
+}
+
+/* --- ESTADOS (BADGES) --- */
+.estado {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+.estado.pagado, .estado.completada {
+    background-color: #4CAF50; /* Verde */
+}
+
+.estado.pendiente, .estado.agendada {
+    background-color: #FFC107; /* Amarillo/Naranja */
+    color: var(--primary-color);
+}
+
+.estado.cancelado {
+    background-color: #F44336; /* Rojo */
+}
+
+/* --- BOTÓN DE CIERRE/ACCIÓN --- */
+.btn-cerrar {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color); /* 🚨 Usa el nuevo rosado */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    display: block; /* Asegura que tome todo el ancho */
+}
+
+.btn-cerrar:hover {
+    background-color: var(--accent-hover); /* 🚨 Usa el rosado más claro para hover */
+}
+
+.btn-pagar {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-pagar:hover {
+    background-color: #4cae4c;
+}
