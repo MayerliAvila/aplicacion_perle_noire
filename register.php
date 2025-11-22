@@ -3,8 +3,7 @@
 // REGISTRO DE NUEVOS CLIENTES
 // =============================================
 
-require 'db.php'; // Incluir la conexión a la BD
-
+require 'config/db.php';
 $error = '';
 $success = '';
 
