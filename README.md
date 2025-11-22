@@ -1,44 +1,49 @@
-📌 Proyecto de Optimización de Procesos Administrativos - Perle Noire
-📝 Descripción
-En la era digital actual, la optimización de procesos administrativos se ha convertido en un factor determinante para el éxito de cualquier organización.
+La rama prueba se utiliza para:
 
-Perle Noire, como empresa dedicada a la prestación de servicios de belleza, enfrenta desafíos significativos en la gestión manual de sus procesos de agendamiento de citas y facturación, lo cual genera:
+Testear nuevas características del sistema.
 
-Ineficiencias operativas
-Posibles errores humanos
-Demoras en la atención al cliente
-🚩 Problemática
-La gestión manual de citas presenta múltiples inconvenientes:
+Validar correcciones antes de integrarlas.
 
-Duplicación de horarios
-Pérdida de información
-Dificultades en el seguimiento de disponibilidad
-Limitaciones en el acceso a la información desde diferentes ubicaciones
-En cuanto a la facturación manual, se identifican:
+Realizar pruebas unitarias y funcionales.
 
-Riesgos de inconsistencias en los registros
-Demoras en la generación de reportes financieros
-Complicaciones en el control de ingresos y seguimiento de pagos
-🎯 Solución Propuesta
-Se plantea el desarrollo de un sistema de información integral que automatice y optimice tanto el proceso de:
+Simular escenarios de uso real sin riesgo.
 
-Agendamiento de citas
-Gestión de facturación
-Este sistema permitirá a Perle Noire:
-✅ Modernizar sus operaciones
-✅ Reducir los tiempos de respuesta
-✅ Minimizar errores administrativos
-✅ Brindar un mejor servicio a los clientes
+Evaluar la integración de módulos (citas, facturación, clientes, personal).
 
-💻 Objetivo del Proyecto
-Desarrollar una aplicación web que integre de manera eficiente el agendamiento de citas con el sistema de facturación, logrando:
+Es un entorno donde pueden existir funciones temporales, código experimental o ajustes pendientes de revisión.
 
-Mayor productividad organizacional
-Acceso a información en tiempo real
-Crecimiento sostenible para la empresa
-Transformación de procesos manuales en procedimientos automatizados
-Precisión, confiabilidad y eficiencia en la gestión administrativa
-📂 Documentación
-Toda la documentación oficial del proyecto se encuentra disponible en el siguiente enlace:
+🛠 Contenido Validado en la Rama
 
-👉 Documentación del Proyecto (Word)
+Aquí se incluyen versiones preliminares de:
+
+Módulos de agendamiento de citas.
+
+Gestión de servicios y disponibilidad del personal.
+
+Prototipos de facturación automatizada.
+
+Pruebas de base de datos y consultas SQL.
+
+Interfaces en desarrollo o en fase beta.
+
+🔄 Flujo de Trabajo
+
+Crear o actualizar la funcionalidad en la rama prueba.
+
+Ejecutar pruebas (unitarias, integrales o manuales).
+
+Revisar resultados y realizar mejoras.
+
+Solicitar merge hacia la rama develop una vez que la funcionalidad sea estable.
+
+⚠ Advertencia
+
+Esta rama no es estable y puede contener:
+
+Funciones incompletas
+
+Cambios sujetos a modificación
+
+Errores o comportamientos temporales
+
+No debe utilizarse para fines de producción.
